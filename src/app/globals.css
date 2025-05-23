@@ -5,6 +5,7 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-secondary-background: var(--secondary-background);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
   --color-sidebar-ring: var(--sidebar-ring);
@@ -44,6 +45,8 @@
   --radius: 0.5rem;
   --background: oklch(1 0 0);
   --foreground: oklch(0.276 0.0224 277.43);
+  --secondary-background: oklch(0.9795 0.0054 274.97);
+  --secondary-foreground: oklch(0.7276 0.0188 278.94);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.276 0.0224 277.43);
   --popover: oklch(1 0 0);
@@ -66,7 +69,7 @@
   --chart-4: oklch(0.828 0.189 84.429);
   --chart-5: oklch(0.769 0.188 70.08);
   --sidebar: oklch(0.3394 0.0158 280.5);
-  --sidebar-foreground: oklch(0.3394 0.0158 280.5);
+  --sidebar-foreground: oklch(0.7276 0.0188 278.94);
   --sidebar-accent: oklch(0.7156 0.0263 278.19);
   --sidebar-accent-foreground: oklch(0.9179 0.0398 277.83);
   --sidebar-border: oklch(0.922 0 0);
