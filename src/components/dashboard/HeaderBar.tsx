@@ -4,10 +4,12 @@ import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
 import notificationIcon from '@/images/icons/notification-icon.svg';
 import searchIcon from '@/images/icons/search-icon.svg';
 import Image from 'next/image';
+import logoIcon from '@/images/logo.svg';
 
 interface HeaderButton {
   label: string;
   icon: string;
+  showInMobile?: boolean;
 }
 
 const headerButtons: HeaderButton[] = [
@@ -18,6 +20,7 @@ const headerButtons: HeaderButton[] = [
   {
     label: 'Notifications',
     icon: notificationIcon,
+    showInMobile: true,
   },
 ];
 
@@ -38,12 +41,25 @@ const HeaderBar = React.memo(
     },
   }: HeaderBarProps) => {
     return (
-      <header className="flex flex-col sm:flex-row items-center justify-between p-4 md:p-[30px] md:pr-[33px] gap-4">
-        <h1 className="text-2xl font-bold tracking-[0.3px]">{title}</h1>
-        <nav className="flex justify-between items-center space-x-8">
+      <header className="flex flex-row items-center justify-between p-4 md:p-[30px] md:pr-[33px] gap-4 bg-secondary sm:bg-transparent">
+        <h1 className="text-2xl font-bold tracking-[0.3px] hidden sm:block">
+          {title}
+        </h1>
+        <Image
+          src={logoIcon}
+          alt="Logo"
+          width={32}
+          height={32}
+          className="cursor-pointer md:cursor-auto block sm:hidden"
+        />
+        <nav className="flex justify-between items-center sm:space-x-8">
           <div className="flex items-center space-x-6">
             {headerButtons.map((button) => (
-              <button key={button.label} aria-label={button.label}>
+              <button
+                key={button.label}
+                aria-label={button.label}
+                className={button.showInMobile ? '' : 'hidden sm:block'}
+              >
                 <Image
                   src={button.icon}
                   alt={button.label}
@@ -52,10 +68,10 @@ const HeaderBar = React.memo(
               </button>
             ))}
           </div>
-          <div className="h-8">
+          <div className="h-8 hidden sm:block">
             <Separator orientation="vertical" />
           </div>
-          <div className="flex items-center space-x-3.5">
+          <div className="hidden sm:flex items-center space-x-3.5">
             <p className="text-sm font-semibold tracking-[0.2px]">
               {user.name}
             </p>

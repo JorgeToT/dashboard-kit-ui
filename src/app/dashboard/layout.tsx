@@ -10,7 +10,7 @@ interface DashboardLayoutProps {
 
 const DashboardLayout = ({ children }: DashboardLayoutProps) => {
   return (
-    <div className="flex h-screen bg-secondary-background text-foreground">
+    <div className="h-screen bg-secondary-background text-foreground">
       <SidebarProvider>
         <Sidebar />
         <div className="flex-1 flex flex-col">

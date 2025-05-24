@@ -2,7 +2,9 @@ import {
   SidebarMenu,
   SidebarMenuItem,
   SidebarMenuButton,
+  useSidebar,
 } from '@/components/ui/sidebar';
+import { useIsMobile } from '@/hooks/use-mobile';
 import Image from 'next/image';
 
 export type SidebarItem = {
@@ -21,6 +23,9 @@ const SidebarMenuGroup = ({
   activeTitle,
   setActiveTitle,
 }: SidebarMenuGroupProps) => {
+  const { openMobile } = useSidebar();
+  const isMobile = useIsMobile();
+
   return (
     <SidebarMenu>
       {items.map((item) => (
@@ -37,10 +42,12 @@ const SidebarMenuGroup = ({
               }}
               className="flex items-center gap-6"
             >
-              <Image src={item.icon} alt={item.title} />
-              <span className="text-base font-extralight tracking-[0.2px] leading-5">
-                {item.title}
-              </span>
+              <Image src={item.icon} alt={item.title} className="h-5" />
+              {((isMobile && openMobile) || !isMobile) && (
+                <span className="text-base font-extralight tracking-[0.2px] leading-5">
+                  {item.title}
+                </span>
+              )}
             </a>
           </SidebarMenuButton>
         </SidebarMenuItem>
