@@ -8,6 +8,7 @@ import {
   FormField,
   FormItem,
   FormLabel,
+  FormMessage,
 } from '@/components/ui/form';
 import { Input } from '@/components/ui/input';
 import useLogin from '@/hooks/useLogin';
@@ -29,6 +30,7 @@ const LoginForm = () => {
                 <FormControl>
                   <Input placeholder="Email address" {...field} />
                 </FormControl>
+                <FormMessage />
               </FormItem>
             )}
           />

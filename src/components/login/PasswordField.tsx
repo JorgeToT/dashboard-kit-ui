@@ -1,10 +1,4 @@
-// PasswordField.tsx
-import {
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-} from '@/components/ui/form';
+import { FormControl, FormField, FormItem, FormLabel, FormMessage } from '@/components/ui/form';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import Link from 'next/link';
@@ -48,6 +42,7 @@ export default function PasswordField() {
               }
             />
           </FormControl>
+          <FormMessage />
         </FormItem>
       )}
     />
