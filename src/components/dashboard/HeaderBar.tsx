@@ -1,26 +1,12 @@
 import React from 'react';
 import { Separator } from '@/components/ui/separator';
 import { Avatar, AvatarFallback, AvatarImage } from '@/components/ui/avatar';
-import notificationIcon from '@/images/icons/notification-icon.svg';
-import searchIcon from '@/images/icons/search-icon.svg';
 import Image from 'next/image';
 import logoIcon from '@/images/logo.svg';
 import { HeaderBarProps } from '@/types/Components.types';
 import { headerButtons } from '@/data/header';
 
-const headerButtons: HeaderButton[] = [
-  {
-    label: 'Search',
-    icon: searchIcon,
-  },
-  {
-    label: 'Notifications',
-    icon: notificationIcon,
-    showInMobile: true,
-  },
-];
-
-const HeaderBar = React.memo(
+export const HeaderBar = React.memo(
   ({
     title,
     user = {
@@ -33,26 +19,12 @@ const HeaderBar = React.memo(
         <h1 className="text-2xl font-bold tracking-[0.3px] hidden sm:block">
           {title}
         </h1>
-        <Image
-          src={logoIcon}
-          alt="Logo"
-          width={32}
-          height={32}
-          className="cursor-pointer md:cursor-auto block sm:hidden"
-        />
+        <Image src={logoIcon} alt="Logo" width={32} height={32} className="cursor-pointer md:cursor-auto block sm:hidden" />
         <nav className="flex justify-between items-center sm:space-x-8">
           <div className="flex items-center space-x-6">
             {headerButtons.map((button) => (
-              <button
-                key={button.label}
-                aria-label={button.label}
-                className={button.showInMobile ? '' : 'hidden sm:block'}
-              >
-                <Image
-                  src={button.icon}
-                  alt={button.label}
-                  className="cursor-pointer hover:opacity-60 transition-opacity"
-                />
+              <button key={button.label} aria-label={button.label} className={button.showInMobile ? '' : 'hidden sm:block'} >
+                <Image src={button.icon} alt={button.label} className="cursor-pointer hover:opacity-60 transition-opacity" />
               </button>
             ))}
           </div>
@@ -73,5 +45,3 @@ const HeaderBar = React.memo(
     );
   },
 );
-
-export default HeaderBar;
