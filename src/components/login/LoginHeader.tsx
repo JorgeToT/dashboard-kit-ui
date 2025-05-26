@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import Logo from '@/images/logo.svg';
 
-const LoginHeader = () => {
+export const LoginHeader = () => {
   return (
     <CardHeader className="gap-8 mb-12">
       <CardTitle>
@@ -25,5 +25,3 @@ const LoginHeader = () => {
     </CardHeader>
   );
 };
-
-export default LoginHeader;

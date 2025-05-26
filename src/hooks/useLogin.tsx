@@ -29,7 +29,7 @@ const useLogin = () => {
       console.log(values);
       setIsLoading(false);
       router.push('/dashboard');
-    }, 2000);
+    }, 4000);
   };
 
   return {
