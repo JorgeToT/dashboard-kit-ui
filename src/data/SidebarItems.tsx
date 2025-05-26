@@ -6,11 +6,7 @@ import overviewIcon from '@/images/icons/overview-icon.svg';
 import settingsIcon from '@/images/icons/settings-icon.svg';
 import subscriptionIcon from '@/images/icons/subscription-icon.svg';
 import ticketIcon from '@/images/icons/ticket-icon.svg';
-
-export type SidebarItem = {
-  title: string;
-  icon: string;
-};
+import { SidebarItem } from '@/types/Components.types';
 
 export const items: SidebarItem[] = [
   { title: 'Overview', icon: overviewIcon },
