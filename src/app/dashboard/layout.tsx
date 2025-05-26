@@ -1,14 +1,9 @@
 import HeaderBar from '@/components/dashboard/HeaderBar';
 import Sidebar from '@/components/dashboard/Sidebar';
 import { SidebarProvider } from '@/components/ui/sidebar';
+import { LayoutProps } from '@/types/Layout.types';
 
-import { ReactNode } from 'react';
-
-interface DashboardLayoutProps {
-  children: ReactNode;
-}
-
-const DashboardLayout = ({ children }: DashboardLayoutProps) => {
+const DashboardLayout = ({ children }: LayoutProps) => {
   return (
     <div className="bg-secondary-background text-foreground">
       <SidebarProvider>

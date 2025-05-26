@@ -5,18 +5,8 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { SidebarMenuGroupProps } from '@/types/Components.types';
 import Image from 'next/image';
-
-export type SidebarItem = {
-  title: string;
-  icon: string;
-};
-
-type SidebarMenuGroupProps = {
-  items: SidebarItem[];
-  activeTitle: string;
-  setActiveTitle: (title: string) => void;
-};
 
 const SidebarMenuGroup = ({
   items,
