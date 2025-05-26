@@ -1,36 +1,84 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Dashboard Kit
 
-## Getting Started
+Una UI de Next.js y TailwindCSS para una página de login y un dashboard.
 
-First, run the development server:
+---
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Prerrequisitos
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- **Node.js** v20 o superior
+- **npm** o **yarn**
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Cómo empezar
 
-## Learn More
+1. **Clonar el repositorio**
+   ```bash
+   git clone https://github.com/JorgeToT/dashboard-kit-ui
+   cd dashboard-kit
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Instalar dependencias**
+   ```bash
+   npm install
+   # o
+   yarn install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Ejecutar en modo desarrollo**
+   ```bash
+   npm run dev
+   # o
+   yarn dev
+   ```
+   Abre [http://localhost:3000](http://localhost:3000) en tu navegador.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## Estructura del proyecto
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```plaintext
+src/
+├── app/
+│   ├── login/page.tsx     # Página de login
+│   ├── dashboard/page.tsx # Página principal
+│   └── globals.css        # Estilos globales
+├── components/
+│   ├── dashboard/         # Componentes del dashboard
+│   ├── login/             # Componentes específicos de login
+│   ├── table/             # Componentes compartidos (Button, InputField)
+│   └── ui/                # Componentes generados por shadcn/ui
+├── data/                  # Información mostrada en los diferentes componentes
+├── hooks/                 # Hooks personalizados
+├── utils/                 # Funciones utilitarias
+└── types/                 # Tipos de TypeScript
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+public/
+└── images/                # Assets exportados de Figma
+
+styles/
+└── globals.css            # Estilos globales
+```  
+
+---
+
+## Scripts disponibles
+
+- `npm run dev` — Inicia el servidor en modo desarrollo
+- `npm run build` — Genera el build de producción
+- `npm run start` — Ejecuta el build de producción
+- `npm run lint` — Ejecuta ESLint
+- `npm run format` — Ejecuta Prettier
+
+---
+
+## Capturas de pantalla
+
+![alt text](public/images/login.png)
+![alt text](public/images/dashboard.png)
+---
+
+## Limitaciones conocidas y TODOs
+
+- Gráficas en el dashboard usan imagenes
