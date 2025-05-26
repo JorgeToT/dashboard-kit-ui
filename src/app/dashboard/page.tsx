@@ -1,5 +1,5 @@
 import StatsCard from '@/components/dashboard/StatsCard';
-import ChartContainer from '@/components/dashboard/ChartContainer';
+import { ChartContainer } from '@/components/dashboard/ChartContainer';
 import { FilesTable } from '@/components/table/FilesTable';
 import { columns } from '@/components/table/FilesTableColumn';
 import { cardData, filesData } from '@/data/dashboardStats';
