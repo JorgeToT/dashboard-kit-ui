@@ -6,7 +6,7 @@ import graphLabel from '@/images/graph-label.png';
 import StatItem from '@/components/dashboard/StatItem';
 import { statsData } from '@/data/dashboardStats';
 
-const ChartContainer = () => {
+export const ChartContainer = () => {
   return (
     <div className="grid grid-cols-12 bg-white rounded-lg border-[1px] mb-2.5 sm:mb-0">
       <div className="col-span-12 sm:col-span-7 md:col-span-8 p-8 pb-0 sm:pb-8 sm:pr-6">
@@ -45,5 +45,3 @@ const ChartContainer = () => {
     </div>
   );
 };
-
-export default ChartContainer;

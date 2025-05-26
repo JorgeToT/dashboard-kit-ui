@@ -1,5 +1,5 @@
-import HeaderBar from '@/components/dashboard/HeaderBar';
-import Sidebar from '@/components/dashboard/Sidebar';
+import { HeaderBar } from '@/components/dashboard/HeaderBar';
+import { Sidebar } from '@/components/dashboard/Sidebar';
 import { SidebarProvider } from '@/components/ui/sidebar';
 import { LayoutProps } from '@/types/Layout.types';
 
