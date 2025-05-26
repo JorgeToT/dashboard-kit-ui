@@ -1,7 +1,7 @@
 import { CardFooter } from '@/components/ui/card';
 import Link from 'next/link';
 
-const LoginFooter = () => {
+export const LoginFooter = () => {
   return (
     <CardFooter>
       <div className="flex gap-[5px]">
@@ -18,5 +18,3 @@ const LoginFooter = () => {
     </CardFooter>
   );
 };
-
-export default LoginFooter;
