@@ -1,12 +1,8 @@
 import StatsCard from '@/components/dashboard/StatsCard';
 import ChartContainer from '@/components/dashboard/ChartContainer';
-
-const cardData = [
-  { title: 'Unresolved', data: '60' },
-  { title: 'Overdue', data: '16' },
-  { title: 'Open', data: '43' },
-  { title: 'On hold', data: '64' },
-];
+import { FilesTable } from '@/components/table/FilesTable';
+import { columns } from '@/components/table/FilesTableColumn';
+import { cardData, filesData } from '@/data/dashboardStats';
 
 const DashboardPage = () => {
   return (
@@ -19,6 +15,7 @@ const DashboardPage = () => {
       <section>
         <ChartContainer />
       </section>
+      <FilesTable columns={columns} data={filesData} />
     </main>
   );
 };
