@@ -5,12 +5,8 @@ import notificationIcon from '@/images/icons/notification-icon.svg';
 import searchIcon from '@/images/icons/search-icon.svg';
 import Image from 'next/image';
 import logoIcon from '@/images/logo.svg';
-
-interface HeaderButton {
-  label: string;
-  icon: string;
-  showInMobile?: boolean;
-}
+import { HeaderBarProps } from '@/types/Components.types';
+import { headerButtons } from '@/data/header';
 
 const headerButtons: HeaderButton[] = [
   {
@@ -23,14 +19,6 @@ const headerButtons: HeaderButton[] = [
     showInMobile: true,
   },
 ];
-
-interface HeaderBarProps {
-  title: string;
-  user?: {
-    name: string;
-    imageUrl: string;
-  };
-}
 
 const HeaderBar = React.memo(
   ({

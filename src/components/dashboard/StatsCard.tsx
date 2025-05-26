@@ -1,9 +1,5 @@
 import { Card, CardHeader, CardContent, CardTitle } from '@/components/ui/card';
-
-interface CardProps {
-  title: string;
-  data: string;
-}
+import { CardProps } from '@/types/Components.types';
 
 const StatsCard = ({ title, data }: CardProps) => {
   return (

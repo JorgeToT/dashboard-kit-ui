@@ -17,7 +17,7 @@ const LoginForm = () => {
   const { form, onSubmit, isLoading } = useLogin();
 
   return (
-    <CardContent className="px-0 mb-40 md:mb-8">
+    <CardContent className="px-0 mb-40 sm:mb-8">
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-6">
           <FormField

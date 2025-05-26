@@ -1,4 +1,4 @@
-import { Files } from '@/components/table/FilesTableColumn';
+import { Files } from '@/types/DataTable.types';
 
 export const cardData = [
   { title: 'Unresolved', data: '60' },

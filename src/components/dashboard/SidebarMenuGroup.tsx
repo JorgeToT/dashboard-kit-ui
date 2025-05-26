@@ -5,18 +5,8 @@ import {
   useSidebar,
 } from '@/components/ui/sidebar';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { SidebarMenuGroupProps } from '@/types/Components.types';
 import Image from 'next/image';
-
-export type SidebarItem = {
-  title: string;
-  icon: string;
-};
-
-type SidebarMenuGroupProps = {
-  items: SidebarItem[];
-  activeTitle: string;
-  setActiveTitle: (title: string) => void;
-};
 
 const SidebarMenuGroup = ({
   items,
@@ -44,7 +34,7 @@ const SidebarMenuGroup = ({
             >
               <Image src={item.icon} alt={item.title} className="h-5" />
               {((isMobile && openMobile) || !isMobile) && (
-                <span className="text-base font-extralight tracking-[0.2px] leading-5">
+                <span className="text-base font-normal tracking-[0.2px] leading-5">
                   {item.title}
                 </span>
               )}
