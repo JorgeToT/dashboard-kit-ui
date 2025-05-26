@@ -8,7 +8,7 @@ import { useIsMobile } from '@/hooks/use-mobile';
 import { SidebarMenuGroupProps } from '@/types/Components.types';
 import Image from 'next/image';
 
-const SidebarMenuGroup = ({
+export const SidebarMenuGroup = ({
   items,
   activeTitle,
   setActiveTitle,
@@ -45,5 +45,3 @@ const SidebarMenuGroup = ({
     </SidebarMenu>
   );
 };
-
-export default SidebarMenuGroup;
